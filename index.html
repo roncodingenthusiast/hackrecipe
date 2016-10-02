@@ -8,6 +8,7 @@
     <!--references below-->
     <!-- Bootstrap included here to get responsive design and cross platform experience -->
     <link href="library/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 
     <!-- HTML5shiv and Respond.js to support internet explorer 8. -->
     <!--[if lt IE 9]>
@@ -27,6 +28,11 @@
         background-size: cover;
       }
       body { padding-top: 70px; }
+      h1 {
+        font: 400 130px/0.8 'Great Vibes', Helvetica, sans-serif;
+        color: #fff;
+        text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
+      }
     </style>
   </head>
   <!--defining my app name or angular module. it is empty because I don't need it yet.-->
@@ -43,8 +49,8 @@
       <div class="btn-toolbar center-block text-center col-sm-12">
         <a class="btn btn-primary btn-lg" href="#" role="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add A Recipe</a>
         <a class="btn btn-success btn-lg" href="#" role="button"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> View Recipes</a>
-        <a class="btn btn-danger btn-lg" href="#" role="button"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete Recipes</a>
         <a class="btn btn-warning btn-lg" href="#" role="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Update Recipes</a>
+         <a class="btn btn-danger btn-lg" href="#" role="button"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete Recipes</a>
         <a class="btn btn-info btn-lg" href="#" role="button"><span class="glyphicon glyphicon glyphicon-info-sign" aria-hidden="true"></span> Credit page</a>
       </div>
     </div>
