@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="angularMainApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,6 +18,7 @@
 
     <!--this is the actual angularJs file that runs-->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
     <style type="text/css">
       html, body{
@@ -36,23 +37,9 @@
     </style>
   </head>
   <!--defining my app name or angular module. it is empty because I don't need it yet.-->
-  <body ng-app="angularMainApp">
-    <div class="container">
-      <div class="jumbotron">
-        <div class="page-header">
-          <h1>Hello, Cook!</br> 
-          <small>You are one click away from the perfect recipe</small></h1>
-        </div>
-        <p></p>
-      </div>
-      <div class="page-header"></div>
-      <div class="btn-toolbar center-block text-center col-sm-12">
-        <a class="btn btn-primary btn-lg" href="#" role="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add A Recipe</a>
-        <a class="btn btn-success btn-lg" href="#" role="button"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> View Recipes</a>
-        <a class="btn btn-warning btn-lg" href="#" role="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Update Recipes</a>
-         <a class="btn btn-danger btn-lg" href="#" role="button"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete Recipes</a>
-        <a class="btn btn-info btn-lg" href="#" role="button"><span class="glyphicon glyphicon glyphicon-info-sign" aria-hidden="true"></span> Credit page</a>
-      </div>
+  <body>
+    <div class="container" ng-view>
+      
     </div>
   </body>
 </html>
