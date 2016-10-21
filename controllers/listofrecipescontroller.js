@@ -4,7 +4,8 @@
 **/
 app.controller('listOfRecipesCtrl', ['$scope', '$http', function($scope, $http){
 	
-	$http.get('data.json').then(function(recipedata){
+	//request data through php from database and saves it in list
+	$http.get('recipedata.php').then(function(recipedata){
 		$scope.list = recipedata.data;		
 	});
 }])
