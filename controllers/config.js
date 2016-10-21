@@ -8,13 +8,13 @@ app.config(function($routeProvider){
 		templateUrl: 'templates/home.html',
 		controller: 'mainCtrl'
 	})
-	.when('/listQuestions',{
-		templateUrl: 'templates/questionslist.html', 
-		controller: 'listOfQuestionsCtrl'
+	.when('/listRecipes',{
+		templateUrl: 'templates/recipeslist.html', 
+		controller: 'listOfRecipesCtrl'
 
-	}).when('/questionsDetails/:questionid', {
-		templateUrl: 'templates/questionsdetails.html',
-		controller: 'questionsDetailsCtrl'
+	}).when('/questionsDetails/:recipeid', {
+		templateUrl: 'templates/recipesdetails.html',
+		controller: 'recipesDetailsCtrl'
 	})
 	.when('/login', {
 		templateUrl: 'templates/login.html', 
@@ -24,9 +24,9 @@ app.config(function($routeProvider){
 		templateUrl: 'templates/register.html', 
 		controller: 'registerCtrl'
 	})
-	.when('/quiz',{
-		templateUrl: 'templates/quiz.html',
-		controller: 'quizctrl'
+	.when('/credit',{
+		templateUrl: 'templates/credit.html',
+		controller: 'creditCtrl'
 	})
 	//if the route is not recognised then it redirects you to home page
 	.otherwise({
