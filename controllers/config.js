@@ -12,7 +12,7 @@ app.config(function($routeProvider){
 		templateUrl: 'templates/recipeslist.html', 
 		controller: 'listOfRecipesCtrl'
 
-	}).when('/questionsDetails/:recipeid', {
+	}).when('/recipesDetails/:recipeid', {
 		templateUrl: 'templates/recipesdetails.html',
 		controller: 'recipesDetailsCtrl'
 	})

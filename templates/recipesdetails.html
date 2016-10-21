@@ -1,0 +1,13 @@
+<div id="recipesdetails" class="row">
+	<h1>Recipes in detail</h1>
+
+	<div class="col-sm-12" ng-model="list">
+		<p>title: {{list[whichItem].text}}</p>
+		<p>Video: {{list[whichItem].url}}</p>
+		<p>Tags: [<span ng-repeat="tag in list[whichItem].Tags" >
+					<span ng-if="!$first">,</span>
+					{{tag.text}}
+				</span>]</p>
+	</div>
+	<a href="#/listRecipes">Back to list</a>
+</div>
