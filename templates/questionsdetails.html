@@ -1,0 +1,15 @@
+<div id="questionsdetails" class="row">
+	<h1>Questions in detail</h1>
+
+	<div class="col-sm-12" ng-model="list">
+		<p>title: {{list[whichItem].text}}</p>
+		<p>Link: {{list[whichItem].link_url}}</p>
+		<p>Video: {{list[whichItem].video_url}}</p>
+		<p>Created on : {{list[whichItem].created_on}}</p>
+		<p>Tags: [<span ng-repeat="tag in list[whichItem].tags" >
+					<span ng-if="!$first">,</span>
+					{{tag.text}}
+				</span>]</p>
+	</div>
+	<a href="#/listQuestions">Back to list</a>
+</div>

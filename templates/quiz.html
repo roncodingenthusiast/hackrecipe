@@ -1,0 +1,37 @@
+<div class="row">
+	<h1>Anticorruption test</h1>
+	<p style="display:{{(activeQuestion > -1) ? 'none' : 'block' }}">Click begin to test your anti-corruption knowledge<br>
+
+		<button class="btn btn-primary" ng-click="activeQuestion = 0">Begin</button>
+	</p>
+	<div style="display:{{(activeQuestion === $index) ? 'block' : 'none' }}" class="row" ng-repeat="myQuestion in myQuestions">
+		
+		<div class="col-sm-12" style="font-size:32px;"><strong>Question:</strong> {{myQuestion.text}}</div>
+		<div class="col-sm-12" 
+		ng-class="{'bg-grey':isSelected($parent.$index, $index),
+					'bg-green':isCorrect($parent.$index, $index)}"
+		ng-click="selectAnswer($parent.$index, $index)"
+		ng-repeat="answer in myQuestions[$index].answers" style="padding:20px;">
+			<p class="bg-warning answer">{{answer.text}}</p>
+		</div>
+		<!--( isCorrect($parent.$index, $index) ? 'bg-primary')-->
+		<div class="col-sm-12" id="feedback" style="display:{{(myQuestion.questionState === 'answered') ? 'block' : 'none' }}">
+			<strong><p style="font-size:32px;" ng-show="myQuestion.correctness === 'correct'">Correct!</p>
+			<p style="font-size:32px;" ng-show="myQuestion.correctness === 'incorrect'">Incorrect!</p></strong>
+			<!-- <p>{{myQuestion.feedback}}</p> -->
+			<p><a ng-href="{{myQuestion.link_url}}">Additional Resources to read on this topic</a></p>
+			<button class="btn btn-warning"
+					ng-click="selectContinue()">Continue</button>
+		</div>
+		
+	</div>
+	<div class="row" style="display:{{(activeQuestion === totalQuestions) ? 'block' : 'none' }}">
+		<h1>Results</h1>
+		<p>You Scored {{percentage}}% by correctly answering {{score}} of the total {{totalQuestions}} questions.</p>
+		<div class="col-sm-12 text-left">
+		   	<a href="#/"><button class="btn btn-default"> <span class="glyphicon glyphicon-home"></span> Home</button></a>
+		</div>
+	</div>
+
+	
+</div>
