@@ -1,6 +1,7 @@
 /**
 	Author: Ronald Ekambi 
-	Purpose of file: provide data for the list of recipes
+	Purpose of file: provide data for the list of recipes. Request data from the database 
+	
 **/
 app.controller('listOfRecipesCtrl', ['$scope', '$http', function($scope, $http){
 	

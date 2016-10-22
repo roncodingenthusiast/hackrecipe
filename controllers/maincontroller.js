@@ -1,7 +1,6 @@
 /**
 	Author: Ronald Ekambi 
-	Purpose of file: provides routes for application. 
-	Define which file should be loaded depeding on URL 
+	Purpose of file: 
 **/
 app.controller('mainCtrl', ['$scope', '$http', function($scope, $http){
 	

@@ -1,6 +1,7 @@
 <div id="recipesdetails" class="row">
 	<h1>Recipes in detail</h1>
-
+	<!--get the details from the recipedetailscontroller through ng-model
+	through the scope variable whichItem it gets the specific one requested-->
 	<div class="col-sm-12" ng-model="list">
 		<p>title: {{list[whichItem].RecipeTitle}}</p>
 		<p>Video: {{list[whichItem].url}}</p>
