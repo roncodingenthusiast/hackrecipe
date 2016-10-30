@@ -1,0 +1,26 @@
+{
+  "name": "hack-a-recipe",
+  "version": "1.0.0",
+  "description": "Website built for adding recipes and deleting recipes",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roncodingenthusiast/hackrecipe.git"
+  },
+  "keywords": [
+    "hackrecipe",
+    "hack",
+    "a",
+    "recipe",
+    "codingenthusiast"
+  ],
+  "author": "Ronald EKambi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roncodingenthusiast/hackrecipe/issues"
+  },
+  "homepage": "https://github.com/roncodingenthusiast/hackrecipe#readme"
+}
