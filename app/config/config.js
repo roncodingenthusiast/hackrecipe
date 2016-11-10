@@ -22,7 +22,7 @@ app.config(function($routeProvider){
 	})
 	.when('/createrecipe', {
 		templateUrl: 'templates/createrecipe.html',
-		controller: 'createCrtl'
+		controller: 'createCtrl'
 	})
 	.when('/createtag', {
 		templateUrl: 'templates/createtag.html',

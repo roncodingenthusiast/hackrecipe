@@ -15,8 +15,8 @@
 	  <div class="form-group">
 	    <label for="inputPassword3" class="col-sm-2 control-label">Ingredients: </label>
 	    <div class="col-sm-10">
-	      <select name="cars" multiple class="form-control">
-			  <option value="volvo">tomato</option>
+	      <select name="ingredients" multiple class="form-control">
+			  <option ng-repeat="ing in ingredients" value="{{ing.id}}">{{ing.text}}</option>
 			</select>
 	    </div>
 	  </div>
@@ -24,7 +24,7 @@
 	    <label for="inputPassword3" class="col-sm-2 control-label">Tags: </label>
 	    <div class="col-sm-10">
 	      <select name="tags" multiple class="form-control">
-			  <option value="lunch">lunch</option>
+			  <option ng-repeat="tag in tags" value="{{tag.id}}">{{tag.text}}</option>
 			</select>
 	    </div>
 	  </div>
