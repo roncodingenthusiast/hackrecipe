@@ -16,10 +16,6 @@ app.config(function($routeProvider){
 		templateUrl: 'templates/recipesdetails.html',
 		controller: 'recipesDetailsCtrl'
 	})
-	.when('/login', {
-		templateUrl: 'templates/login.html', 
-		controller: 'loginCtrl'
-	})
 	.when('/register', {
 		templateUrl: 'templates/register.html', 
 		controller: 'registerCtrl'
@@ -28,7 +24,7 @@ app.config(function($routeProvider){
 		templateUrl: 'templates/credit.html',
 		controller: 'creditCtrl'
 	})
-	.when('/create', {
+	.when('/createrecipe', {
 		templateUrl: 'templates/createrecipe.html',
 		controller: 'createCrtl'
 	})

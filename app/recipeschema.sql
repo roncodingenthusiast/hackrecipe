@@ -14,9 +14,18 @@ create table tag (
  id int not null auto_increment Primary Key,
  `text` text
 );
+create table ingredient(
+	id int not null auto_increment Primary Key,
+ 	`text` text
+);
 -- join table for many-to-many between recipes and tags
 create table recipe_tag (
  recipe_id int not null,
  tag_id int not null
+);
+
+create table recipe_ingredient (
+	recipe_id int not null,
+ 	ingredient_id int not null
 );
 

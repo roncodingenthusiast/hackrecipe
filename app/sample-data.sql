@@ -37,3 +37,15 @@ INTO
   recipe_tag(`recipe_id`,
   `tag_id`)
 VALUES(1, 1),(1, 2),(2, 3),(3, 5),(4, 5);
+
+
+INSERT
+INTO
+  ingredient(`text`)
+VALUES('tomato'),('salad'),('beans'),('salt'),('sugar'),('ice');
+
+INSERT
+INTO
+  recipe_ingredient(`recipe_id`,
+  `ingredient_id`)
+VALUES(1, 1),(1, 2),(2, 3),(3, 5),(4, 5);

@@ -31,7 +31,13 @@
 					{{tag.text}}
 				</span>
 			]</span>
-			
+			<!--through ng-repeat, it loops through the ingredients in recipe and outputs each of them-->
+			<span class="text-info">{
+				<span ng-repeat="ingredient in recipe.ingredients" >
+					<span ng-if="!$first">,</span>
+					{{ingredient.text}}
+				</span>
+			}</span>
 			
 		</div>
 	</div>

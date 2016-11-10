@@ -20,6 +20,22 @@ function load_tags($link, $recipe_id){
     return $result;
 }
 
+//load tags from database
+function load_ingredients($link, $recipe_id){
+    $stmt = $link->stmt_init();
+    $result = array();
+    $sql = 'select ingredient.* from recipe_ingredient as ri, ingredient where ri.ingredient_id=ingredient.id and ri.recipe_id = ?';
+    $stmt->prepare($sql);
+    $stmt->bind_param("i", $recipe_id);
+    $stmt->execute();
+    $result_set = $stmt->get_result();
+    while ($row = $result_set->fetch_object()) {
+        array_push($result, $row);
+    }
+    $stmt->close();
+    return $result;
+}
+
 //load recipes from databases.
 function load_recipes($link) {
     $result = array();
@@ -38,7 +54,9 @@ echo '[';
 for ($i=0; $i<count($recipes); $i++) {
     $recipe = $recipes[$i];
     $tags = load_tags($link, $recipe->id);
+    $ingredients = load_ingredients($link, $recipe->id);
     $recipe->tags=$tags;
+    $recipe->ingredients = $ingredients;
     if($i>0) {
         echo(',');
     }
