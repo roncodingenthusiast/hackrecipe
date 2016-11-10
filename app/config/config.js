@@ -16,10 +16,6 @@ app.config(function($routeProvider){
 		templateUrl: 'templates/recipesdetails.html',
 		controller: 'recipesDetailsCtrl'
 	})
-	.when('/register', {
-		templateUrl: 'templates/register.html', 
-		controller: 'registerCtrl'
-	})
 	.when('/credit',{
 		templateUrl: 'templates/credit.html',
 		controller: 'creditCtrl'

@@ -1,9 +1,6 @@
 <?php
 
-// connect to the mysql database
-//                     host         username     password        schema 
-$link = mysqli_connect('localhost', 'root', 'Aline1995', 'recipeschema');
-
+include('phpscripts/connect.php');
 //load tags from database
 function load_tags($link, $recipe_id){
     $stmt = $link->stmt_init();
