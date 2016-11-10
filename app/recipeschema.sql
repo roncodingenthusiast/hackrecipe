@@ -7,6 +7,7 @@ create table recipe (
  modified_by int,
  modified_on timestamp default 0 ON UPDATE CURRENT_TIMESTAMP,
  RecipeTitle text,
+ recipedetail text,
  url varchar(1000)
 );	
 create table tag (

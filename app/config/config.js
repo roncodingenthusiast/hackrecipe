@@ -28,6 +28,10 @@ app.config(function($routeProvider){
 		templateUrl: 'templates/credit.html',
 		controller: 'creditCtrl'
 	})
+	.when('/create', {
+		templateUrl: 'templates/createrecipe.html',
+		controller: 'createCrtl'
+	})
 	//if the route is not recognised then it redirects you to home page
 	.otherwise({
 		redirecTo: '/'
