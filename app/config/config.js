@@ -30,7 +30,7 @@ app.config(function($routeProvider){
 	})
 	.when('/createingredient', {
 		templateUrl: 'templates/createingredient.html',
-		controller: 'createIngredientCrtl'
+		controller: 'createIngredientCtrl'
 	})
 	//if the route is not recognised then it redirects you to home page
 	.otherwise({
