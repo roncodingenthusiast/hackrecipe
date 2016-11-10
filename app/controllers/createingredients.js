@@ -20,10 +20,10 @@ app.controller('createIngredientCtrl', ['$scope', '$http', function($scope, $htt
 			console.log("successfully went to php file and back");
 			console.log(data);
 			if(data.errors){
-				$scope.errorTag = data.errors.tagerror;
+				$scope.errorIng = data.errors.ingerror;
 				
 			}else{
-				$scope.loadTags();
+				$scope.loadIngredients();
 			}
 		});
 	}
