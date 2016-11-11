@@ -1,3 +1,7 @@
+<!-- Author: Ronald EKambi 
+     File for create tag page. Contains a form to allow user to enter and submit new tags.
+-->
+<!--navigation bar-->
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -18,6 +22,9 @@
         <li class="active"><a href="#/createtag">Create tags<span class="sr-only">(current)</span></a></li>
         <li><a href="#/createingredient">Create Ingredients</a></li>
         <li><a href="#/listRecipes">List Recipes</a></li>
+        <li class="credit">
+          <a href="#/credit">credit</a>
+        </li>
       </ul>
       <form class="navbar-form navbar-left">
         <div class="form-group">
@@ -32,6 +39,8 @@
   </div><!-- /.container-fluid -->
 </nav>
 <div class="row">
+    <!--novalidate: disables the default browser validation
+      Ng-submit: define what function from the controller will be called once this is form is submitted-->
 	<form class="form-horizontal" name="createtagform"
 		ng-submit="createTag(tagname)" novalidate>
 	  <div class="form-group">
@@ -40,12 +49,13 @@
 	      <input type="text" class="form-control" name="text" placeholder="enter text question" 
 	      		ng-model="tagname" ng-required="true" ng-minlength="2">
 	    </div>
-	    
+	    <!--this below only shows up when the form has been touched by user and the input is invalid-->
 	    <div class="col-sm-12 text-center" ng-show="createtagform.text.$invalid && createtagform.text.$touched">Invalid entry tag</div>
 	  </div>
 	 
 	  <div class="form-group">
 	    <div class="col-sm-offset-2 col-sm-10">
+        <!--button is disabled until the form is valid-->
 	      <button type="submit" class="btn btn-primary" ng-disabled="createtagform.$invalid">Create Tag</button>
 	    </div>
 	  </div>
@@ -53,7 +63,7 @@
 </div>
 <div class="row">
 	<div class="col-sm-12">
-
+  <!--ng-repeat is a loop through tags array in the createtags.js container the controller for this page-->
 		<div class="bg-success" ng-repeat="tag in tags | filter: query" style="padding:20px;margin-top: 5px;">
 			
 				{{tag.text}}
