@@ -17,7 +17,7 @@ How to run:
 ## How to run project 
 
 * Download project as zip and extract it 
-* Copy the folder codeebees-anticorrution with content on your server
+* Copy the folder hackrecipe with content on your server
 * If running using Xampp: move to folder c:/xampp/htdocs/  
 * Start up your server (Example: start services on xampp control panel for apache and mysql)
 * Go to [http://localhost/hackrecipe/app/][3] in your browser
