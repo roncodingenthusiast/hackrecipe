@@ -21,4 +21,9 @@ app.controller('createCtrl', ['$scope', '$http', function($scope, $http){
 		});
 	}
 	$scope.loadIngredients();
+
+	//create a function that gets input data
+	$scope.createrecipe = function(recipedata){
+		console.log(recipedata);
+	}
 }])
