@@ -1,9 +1,11 @@
 /**
 	Author: Ronald Ekambi 
 	Purpose of file: provides routes for application. 
-	Define which file should be loaded depeding on URL 
+	Define which file should be loaded depeding on URL that is requested by user 
+	it also defines which controller is use for each route. 
 **/
 app.config(function($routeProvider){
+	//when the user initially access the application it goes to home
 	$routeProvider.when('/', {
 		templateUrl: 'templates/home.html',
 		controller: 'mainCtrl'
