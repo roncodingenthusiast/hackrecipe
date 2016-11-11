@@ -1,3 +1,7 @@
+/**
+	Author; Ronald Ekambi 
+	Purpose: export config to grunt and points to the karma config file
+*/
 module.exports = function(grunt){
 	grunt.initConfig({
 		karma: {

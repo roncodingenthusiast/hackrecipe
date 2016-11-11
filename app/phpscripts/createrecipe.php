@@ -1,4 +1,11 @@
-<?php 
+<?php
+	/* Author: Ronald EKambi 
+		Insert a new recipe to the database. 
+		$recipeid: is the new recipe id. 
+		$ingid: it is the ingredient id;
+		$conn: is the connection object result of the function call of mysqli_connect(host, username, password, schema)
+		$tagid: it is the tag id;
+	*/ 
 	include 'connect.php';
 	
 	function insert_ing_recipe($recipeid, $ingid, $conn){

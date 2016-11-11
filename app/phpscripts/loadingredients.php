@@ -1,4 +1,7 @@
 <?php
+	/** Author: Ronald Ekambi
+		Purpose: loads ingredients from db  
+	*/
 	include 'connect.php';
 	function get_all_ingredients($conn){
 		$stmt = $conn->stmt_init();

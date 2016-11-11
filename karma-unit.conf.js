@@ -1,3 +1,6 @@
+/** Author: Ronald Ekambi
+    Purpose: Specify what browser and what testing framework needed 
+    and the place where unit test reside in my app directory*/ 
 module.exports = function(config){
 	config.set({
 		frameworks: ['jasmine'], //testing framework 

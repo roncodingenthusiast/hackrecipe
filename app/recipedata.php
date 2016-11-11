@@ -1,5 +1,7 @@
 <?php
-
+/** Author: Ronald Ekambi 
+    Purpose: loads recipe with associated tags and ingredient from db
+*/
 include('phpscripts/connect.php');
 //load tags from database
 function load_tags($link, $recipe_id){
@@ -17,7 +19,7 @@ function load_tags($link, $recipe_id){
     return $result;
 }
 
-//load tags from database
+//load ingredients from database
 function load_ingredients($link, $recipe_id){
     $stmt = $link->stmt_init();
     $result = array();

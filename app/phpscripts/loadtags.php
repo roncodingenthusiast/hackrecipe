@@ -1,4 +1,7 @@
 <?php
+	/** Author: Ronald Ekambi 
+		Purpose: load ingredients from db
+	*/
 	include 'connect.php';
 	function get_all_tags($conn){
 		$stmt = $conn->stmt_init();

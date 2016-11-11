@@ -1,3 +1,5 @@
+# Author: Ronald Ekambi
+# Purpose: loads sample data to db
 INSERT
 INTO
   tag(`text`)

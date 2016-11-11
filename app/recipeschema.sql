@@ -1,3 +1,5 @@
+#Author: Ronald Ekambi 
+#create needed tables for app
 create schema recipeschema;
 
 create table recipe (

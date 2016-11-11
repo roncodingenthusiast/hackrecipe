@@ -1,4 +1,7 @@
 <?php
+	/** Author: Ronald Ekambi 
+		deletes an incredient from db
+	**/
 	include 'connect.php';
 	$errors = array();
 	$_POST = json_decode(file_get_contents('php://input'), true);
