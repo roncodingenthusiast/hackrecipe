@@ -7,7 +7,26 @@
 		$tagid: it is the tag id;
 	*/ 
 	include 'connect.php';
-	
+	//decode post data from the js file
+	$_POST = json_decode(file_get_contents('php://input'), true);
+	$intructions = $_POST['instructions'];
+	$ingredients = $_POST['ingredients'];
+	$tags = $_POST['tags'];
+	$title = $_POST['title'];
+	$url = $_POST['url'];
+	$data = array();
+	//insert_recipe returns the recipe id
+	$recipeID = insert_recipe($title, $intructions, $url, $link);
+	$data['recipe'] = 'successful entery of recipe';
+	foreach($tags as $tag){ 
+		insert_tag_recipe($recipeID, $tag, $link);
+	}
+	$data['tag'] = 'successful entery of tags';
+	foreach($ingredients as $ing){
+		insert_ing_recipe($recipeID, $ing, $link);
+	}
+	$data['ing'] = 'successful entery of ingredients';
+	echo json_encode($data);
 	function insert_ing_recipe($recipeid, $ingid, $conn){
 		$stmt = $conn->stmt_init();
 		$result = array();

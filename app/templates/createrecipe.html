@@ -36,7 +36,7 @@
 	  <div class="form-group">
 	    <label for="inputEmail3" class="col-sm-2 control-label">Recipe Title:</label>
 	    <div class="col-sm-10">
-	      <input type="text" ng-model="recipedata.title" class="form-control" id="inputEmail3" placeholder="Eg: Tomato gravy">
+	      <input type="text" ng-model="recipedata.title" class="form-control" id="recipetitle" placeholder="Eg: Tomato gravy">
 	    </div>
 	  </div>
 	  <div class="form-group">
@@ -60,6 +60,12 @@
 	      <select ng-model="recipedata.tags" name="tags" multiple class="form-control">
 			  <option ng-repeat="tag in tags" value="{{tag.id}}">{{tag.text}}</option>
 			</select>
+	    </div>
+	  </div>
+	   <div class="form-group">
+	    <label for="inputEmail3" class="col-sm-2 control-label">Recipe URL:</label>
+	    <div class="col-sm-10">
+	      <input type="url" ng-model="recipedata.url" class="form-control" id="inputurl" placeholder="Eg: https://www.youtube.com/watch?v=yFR124ywMjg&index=28&list=RDMMfNjTIz-zRrE">
 	    </div>
 	  </div>
 	  

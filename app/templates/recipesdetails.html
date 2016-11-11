@@ -35,17 +35,43 @@
 	<h1>Recipes in detail</h1>
 	<!--get the details from the recipedetailscontroller through ng-model
 	through the scope variable whichItem it gets the specific one requested-->
-	<div class="col-sm-12" ng-model="list">
-		<p>title: {{list[whichItem].RecipeTitle}}</p>
-		<p>Video: {{list[whichItem].url}}</p>
-		<p>Ingredients: {<span ng-repeat="ing in list[whichItem].ingredients" >
-					<span ng-if="!$first">,</span>
-					{{ing.text}}
-				</span>}</p>
-		<p>Tags: [<span ng-repeat="tag in list[whichItem].tags" >
-					<span ng-if="!$first">,</span>
-					{{tag.text}}
-				</span>]</p>
-	</div>
+
+  <table class="table-striped table"> 
+      <tr>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr> 
+          <td>Title: </td>
+          <td>{{list[whichItem].RecipeTitle}}</td>
+      </tr>
+      <tr> 
+          <td> Details: </td>
+          <td> </td>
+      </tr>
+      <tr> 
+          <td>Video:</td>
+          <td> {{list[whichItem].url}}</td>
+      </tr>
+
+      <tr> 
+          <td>Ingredients: </td>
+          <td>{<span ng-repeat="ing in list[whichItem].ingredients" >
+          <span ng-if="!$first">,</span>
+          {{ing.text}}
+        </span>}</p> </td>
+      </tr>
+      <tr> 
+          <td>Tags: </td>
+          <td> [<span ng-repeat="tag in list[whichItem].tags" >
+          <span ng-if="!$first">,</span>
+          {{tag.text}}
+        </span>] </td>
+      </tr>
+      <tr> 
+          <td> </td>
+          <td> </td>
+      </tr>
+  </table>
 	<a href="#/listRecipes">Back to list</a>
 </div>
