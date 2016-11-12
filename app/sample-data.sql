@@ -11,8 +11,7 @@ INTO
     `id`,
     `created_by`,
     `RecipeTitle`,
-    `url`, 
-    `recipedetail`
+    `url`
   )
 VALUES(
   1,

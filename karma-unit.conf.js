@@ -7,7 +7,14 @@ module.exports = function(config){
 		browsers: ['Firefox'], //browser in which unit test will be run
 		//we set files karma will load as part of running the unit test.
 		files: [
+			
+			'app/library/angular/angular.min.js',
+			'app/library/angular/angular-mocks.js',
+			'app/library/angular/angular-route.min.js',
+			'app/app.js',
+			'app/controllers/*.js',
 			'test/unit/*.js'
+
 		]
 	});
 };

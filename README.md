@@ -36,6 +36,8 @@ How to run:
 ![ALT][2]
 
 
+Note: locate the connect.php file in app/phpscripts/ folder to update the schema name and password and username for the database. 
+
 
 [1]: https://angularjs.org/
 [2]: test/sample/test-running.PNG

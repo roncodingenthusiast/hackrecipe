@@ -2,6 +2,7 @@
 	Purporse: this file define the controller for the page to create recipes
 **/
 app.controller('createCtrl', ['$scope', '$http', '$location', function($scope, $http, $location){
+	$scope.number = 1;
 	$scope.tags;
 	$scope.ingredients;
 	//the function below call the php file loadtags.php which returns a json object of all the tags and 
