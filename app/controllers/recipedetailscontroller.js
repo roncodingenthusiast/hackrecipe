@@ -4,7 +4,6 @@
 	Define which file should be loaded depeding on URL 
 **/
 app.controller('recipesDetailsCtrl', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
-	
 	//requesting data from the database and save it to list variable that will be used 
 	//in the html to generate the list or show details
 	$http.get('recipedata.php').then(function(recipedata){

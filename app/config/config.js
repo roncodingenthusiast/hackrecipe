@@ -18,6 +18,10 @@ app.config(function($routeProvider){
 		templateUrl: 'templates/recipesdetails.html',
 		controller: 'recipesDetailsCtrl'
 	})
+	.when('/editrecipe/:recipeid', {
+		templateUrl: 'templates/editrecipe.html',
+		controller: 'editCtrl'
+	})
 	.when('/credit',{
 		templateUrl: 'templates/credit.html',
 		controller: 'creditCtrl'

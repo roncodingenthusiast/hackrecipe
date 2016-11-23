@@ -8,4 +8,23 @@ app.controller('listOfRecipesCtrl', ['$scope', '$http', function($scope, $http){
 	$http.get('recipedata.php').then(function(recipedata){
 		$scope.list = recipedata.data;
 	});
-}])
+	$scope.deleteRecipe = function (recipe_id) {
+		if (!confirm('Are you sure you want to delete this recipe?')) {
+			console.log("recipe is about to delete");
+			return;
+		}
+
+		$.ajax({
+			url: '/hackrecipe/app/phpscripts/deleterecipe.php?id='+recipe_id,
+			type: 'DELETE',
+			success: function (result) {
+				$scope.loadData();
+			}
+		});
+	};
+	$scope.loadData = function () {
+		$http.get('/hackrecipe/app/recipedata.php').then(function (recipedata) {
+			$scope.list = recipedata.data;
+		});
+	};
+}]);

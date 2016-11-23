@@ -10,6 +10,7 @@ describe('checking creditcontroller', function(){
 		beforeEach(inject(function($rootScope, $controller){
 			
 			scope = $rootScope.$new();
+			console.log(scope);
 			controller = $controller;
 			
 			controller = $controller('creditCtrl', {
