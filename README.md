@@ -1,7 +1,7 @@
 # hackrecipe
 
 * Built using [AngularJS][1] as front-end 
-* MySQL as backend. 
+* MySQL as DB. 
 * Karma (Test Runner) + Jasmine (Testing Framework) for testing 
 * GruntJs (Task Runner) for task automation
 
